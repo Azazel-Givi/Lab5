@@ -1,6 +1,7 @@
 import java.text.SimpleDateFormat;
 import java.util.*;
 
+
 public class App {
     String str = "";
     static String time;
@@ -15,7 +16,7 @@ public class App {
             Scanner in = new Scanner(System.in);
             LinkedList<HumanBeing> collection = new LinkedList<>();
             //читаем данные из файла
-            Comand.Read(collection, "text.json");
+            Comand.Read(collection, System.getenv("LABA5json"));
             Comparator_3000 comparator = new Comparator_3000();
             collection.sort(comparator);
             //определяем дату
